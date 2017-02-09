@@ -6,18 +6,12 @@
     <artifactId>custom-dialogs</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    
-    <!--        <dependency>
-        <groupId>org.javafx</groupId>
-        <artifactId>Dialogs</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </dependency>-->
+
 
     <name>custom-dialogs</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!--<mainClass>org.javafx.dialogs.JavaFXDialogs</mainClass>-->
     </properties>
 
     <build>
