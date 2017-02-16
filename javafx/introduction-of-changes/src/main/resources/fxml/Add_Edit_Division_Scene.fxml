@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="400.0" minWidth="500.0" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.ais.introductionofchanges.controllers.DivisionChangesController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Название" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="15.0" layoutY="47.0" text="Департамент" AnchorPane.leftAnchor="14.0" />
+      <TextField fx:id="divisionNameTextField" layoutX="133.0" layoutY="10.0" prefHeight="25.0" prefWidth="352.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="addButton" layoutX="19.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="25.0" prefWidth="150.0" text="Добавить" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button layoutX="364.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefWidth="150.0" text="Отменить" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <ComboBox fx:id="departmentComboBox" layoutX="133.0" layoutY="43.0" prefHeight="25.0" prefWidth="352.0" AnchorPane.leftAnchor="112.0" AnchorPane.rightAnchor="14.0" />
+      <TreeView fx:id="employeesTreeView" layoutX="19.0" layoutY="103.0" prefHeight="200.0" prefWidth="451.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="102.0" />
+      <Button layoutX="15.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleAddEmployeeToDivisionButtonAction" text="Выбрать сотрудников" AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="removeEmployeesFromDivisionButton" layoutX="150.0" layoutY="78.0" mnemonicParsing="false" onAction="#handleRemoveEmployeesFromDivisionButtonAction" text="Убрать сотрудников" AnchorPane.rightAnchor="14.0" />
+   </children>
+</AnchorPane>

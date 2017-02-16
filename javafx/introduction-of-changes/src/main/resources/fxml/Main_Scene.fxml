@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.ais.introductionofchanges.controllers.MainController">
+    <children>
+        <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="130.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu fx:id="fileMenu" mnemonicParsing="false" text="Файл">
+                    <items>
+                        <MenuItem fx:id="changeUserMenuItem" mnemonicParsing="false" onAction="#handleChangeUserMenuItemAction" text="Сменить пользователя" />
+                        <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#handleExitMenuItemAction" text="Выход" />
+                    </items>
+                </Menu>
+                <Menu fx:id="helpMenu" mnemonicParsing="false" text="Помощь">
+                    <items>
+                        <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHelpMenuItemAction" text="Справка" />
+                        <MenuItem fx:id="aboutProgramMenuItem" mnemonicParsing="false" onAction="#handleAboutProgramMenuItemAction" text="О программе" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Button fx:id="helpButton" layoutX="497.0" layoutY="56.0" onAction="#handleHelpButtonAction" prefHeight="25.0" prefWidth="85.0" text="Справка" textAlignment="CENTER" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+        <Button fx:id="changeUserButton" layoutX="323.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleChangeUserButtonAction" prefHeight="25.0" prefWidth="190.0" text="Сменить пользователя" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="50.0" />
+        <TabPane fx:id="tabPane" layoutX="15.0" layoutY="104.0" prefHeight="225.0" prefWidth="546.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+            <tabs>
+                <Tab id="changesTab" fx:id="changesTab" text="Изменения в АСО &quot;Рупор&quot;">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="addRecordInChangesTabButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAddRecordInChangesTabButtonAction" prefHeight="25.0" prefWidth="150.0" text="Добавить запись" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <Button fx:id="editRecordInChangesTabButton" layoutX="167.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleEditRecordInChangesTabButtonAction" prefHeight="25.0" prefWidth="150.0" text="Редактировать запись" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="15.0" />
+                                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="50.0" minHeight="600.0" minWidth="800.0" prefHeight="200.0" prefWidth="413.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
+                                    <content>
+                                        <TableView fx:id="changesTable" prefHeight="414.0" prefWidth="403.0">
+                                            <columns>
+                                                <TableColumn fx:id="changesIdTableColumn" minWidth="30.0" prefWidth="30.0" resizable="false" text="№" />
+                                    <TableColumn minWidth="200.0" prefWidth="250.0" text="Сотрудник (ФИО, должность)">
+                                       <columns>
+                                                      <TableColumn fx:id="changesEmployeeOnVacationTableColumn" minWidth="100.0" prefWidth="150.0" text="В отпуске" />
+                                          <TableColumn fx:id="changesEmployeeActingTableColumn" minWidth="100.0" prefWidth="150.0" text="Исполняющий обязанности" />
+                                       </columns>
+                                    </TableColumn>
+                                    <TableColumn maxWidth="300.0" minWidth="200.0" prefWidth="200.0" text="Период">
+                                       <columns>
+                                          <TableColumn fx:id="changesStartDateTableColumn" maxWidth="150.0" minWidth="120.0" prefWidth="120.0" text="Начало" />
+                                          <TableColumn fx:id="changesEndDateTableColumn" maxWidth="150.0" minWidth="120.0" prefWidth="120.0" text="Конец" />
+                                       </columns></TableColumn>
+                                    <TableColumn fx:id="changesGroundsTableColumn" minWidth="100.0" prefWidth="150.0" text="Основание" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="alertListsTab" text="Списки системы оповещения">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="addRecordInAlertListsTabButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleAddRecordInAlertListsTabButtonAction" prefHeight="25.0" prefWidth="150.0" text="Добавить список" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="49.0" prefHeight="175.0" prefWidth="297.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0">
+                                    <content>
+                                        <TableView fx:id="alertListsTable" prefHeight="163.0" prefWidth="413.0">
+                                            <columns>
+                                                <TableColumn fx:id="alertListIdTableColumn" prefWidth="30.0" text="№" />
+                                                <TableColumn fx:id="alertListNameTableColumn" prefWidth="310.0" text="Список оповещения" />
+                                            </columns>
+                                        </TableView>
+                                    </content>
+                                </ScrollPane>
+                        <Button layoutX="166.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleEditRecordInAlertListsTabButtonAction" prefHeight="25.0" prefWidth="150.0" text="Редактировать список" AnchorPane.leftAnchor="180.0" />
+                        <Button layoutX="316.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleDeleteRecordInAlertListsTabButtonAction" prefWidth="150.0" text="Удалить список" AnchorPane.leftAnchor="345.0" />
+                        <Button layoutX="430.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAddDeleteEmployeeInAlertListsButtonAction" prefWidth="150.0" text="Добавить сотрудника" AnchorPane.leftAnchor="510.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab id="logsTab" text="Журналы">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <ChoiceBox fx:id="journalsChoiceBox" layoutX="287.0" layoutY="14.0" prefWidth="150.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                                <ScrollPane fx:id="journalsScrollPane" fitToHeight="true" fitToWidth="true" layoutX="14.0" layoutY="56.0" prefHeight="410.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab id="catalogsTab" fx:id="catalogsTab" text="Справочники">
+              <content>
+                <AnchorPane fx:id="ca" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ChoiceBox fx:id="catalogChoiceBox" layoutX="536.0" layoutY="14.0" prefWidth="150.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+                        <ScrollPane fx:id="catalogScrollPane" layoutY="51.0" prefHeight="416.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+                        <Button fx:id="addRecordToCatalogButton" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleAddRecordToCatalogButtonAction" prefWidth="120.0" text="Добавить" AnchorPane.leftAnchor="15.0" />
+                        <Button fx:id="editRecordInCatalogButton" layoutX="96.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleEditRecordToCatalogButtonAction" prefWidth="120.0" text="Редактировать" AnchorPane.leftAnchor="150.0" />
+                        <Button fx:id="deleteRecordFromCatalogButton" layoutX="205.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleDeleteRecordToCatalogButtonAction" prefWidth="120.0" text="Удалить" AnchorPane.leftAnchor="285.0" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

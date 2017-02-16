@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.ais.introductionofchanges.controllers.AddRecordToModelController">
+   <children>
+      <Button layoutX="14.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleOkButtonAction" prefHeight="25.0" prefWidth="150.0" text="ОК" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button layoutX="314.0" layoutY="450.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="25.0" prefWidth="150.0" text="Отменить" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <ListView fx:id="objectListView" layoutX="14.0" layoutY="138.0" prefHeight="349.0" prefWidth="450.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Label fx:id="chooseLabel" layoutX="14.0" layoutY="6.0" text="Выберите" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="6.0" />
+      <Pane fx:id="filterPane" layoutX="14.0" layoutY="77.0" prefHeight="113.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="77.0">
+         <children>
+            <Label fx:id="filter1Label" layoutX="8.0" layoutY="12.0" text="Фильтр1" />
+            <TextField fx:id="filter1TextField" layoutX="101.0" layoutY="8.0" prefHeight="25.0" prefWidth="360.0" />
+            <Label fx:id="filter2Label" layoutX="8.0" layoutY="49.0" text="Фильтр2" />
+            <TextField fx:id="filter2TextField" layoutX="101.0" layoutY="45.0" prefHeight="25.0" prefWidth="360.0" />
+            <Label fx:id="filter3Label" layoutX="8.0" layoutY="83.0" text="Фильтр3" />
+            <TextField fx:id="filter3TextField" layoutX="101.0" layoutY="79.0" prefHeight="25.0" prefWidth="360.0" />
+         </children>
+      </Pane>
+      <CheckBox fx:id="isShowFiltersCheckBox" layoutX="14.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleIsShowFiltersCheckBoxAction" text="Показать фильтры" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="44.0" />
+   </children>
+</AnchorPane>

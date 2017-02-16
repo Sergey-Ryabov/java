@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root_vbox" prefHeight="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javafx.map.controllers.MainController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="5.0">
+         <children>
+            <Label text="Zoom" />
+            <Button mnemonicParsing="false" onAction="#zoomOut" text="-" />
+            <Slider fx:id="zoom_slider" />
+            <Button mnemonicParsing="false" onAction="#zoomIn" text="+" />
+            <Region minWidth="300.0" prefHeight="25.0" HBox.hgrow="ALWAYS" />
+            <Button minWidth="150.0" mnemonicParsing="false" onAction="#handleEditObjectButtonAction" prefWidth="150.0" text="Редактировать объект" />
+            <Button minWidth="150.0" mnemonicParsing="false" onAction="#handleDeleteObjectButtonAction" prefWidth="150.0" text="Удалить объект" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </HBox>
+      <SplitPane dividerPositions="0.9322429906542056" VBox.vgrow="ALWAYS">
+         <items>
+            <SplitPane dividerPositions="0.0729559748427673" prefHeight="441.0" prefWidth="610.0" VBox.vgrow="ALWAYS">
+               <items>
+                  <ListView fx:id="map_listview" maxWidth="231.0" minWidth="55.0" onMouseClicked="#listClicked" prefWidth="100.0" />
+                  <ScrollPane fx:id="map_scrollpane" minWidth="200.0" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <Pane>
+                           <children>
+                              <ImageView fx:id="imageView" onMouseClicked="#onMouseClicked" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" pickOnBounds="true" preserveRatio="true" />
+                              <MenuButton fx:id="map_pin" layoutX="67.0" layoutY="163.0" mnemonicParsing="false">
+                                <items>
+                                  <MenuItem fx:id="pin_info" mnemonicParsing="false" text="Action 1" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </Pane>
+                     </content>
+                  </ScrollPane>
+               </items>
+            </SplitPane>
+            <ScrollPane maxWidth="1000.0" minWidth="55.0" prefWidth="100.0">
+               <content>
+                  <Pane fx:id="containerForGridPanes" />
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </children>
+</VBox>
