@@ -138,7 +138,7 @@ public class TemperatureDAOMySqlImpl extends GenericDAOMySqlImpl<Temperature, Lo
 
     private void setCommonParameters(PreparedStatement statement, Temperature o) throws SQLException {
         statement.setDouble(1, o.getTempValue());
-        statement.setTimestamp(2, o.getTempDate());
+        statement.setTimestamp(2, new Timestamp(o.getTempDate().getTime()));
     }
 
 }

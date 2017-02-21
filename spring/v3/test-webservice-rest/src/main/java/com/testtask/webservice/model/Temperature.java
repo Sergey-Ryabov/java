@@ -15,29 +15,29 @@ public class Temperature implements Serializable, Identifier {
 
     private Long id;
     private double tempValue;
-    private Timestamp tempDate;
+    private Date tempDate;
 
 
     public Temperature() {
-        tempDate = new Timestamp(new Date().getTime());
+        tempDate = new Date();
     }
 
-    public Temperature(double tempValue, Timestamp tempDate) {
+    public Temperature(double tempValue, Date tempDate) {
         this.tempValue = tempValue;
         if (tempDate != null) {
             this.tempDate = tempDate;
         } else {
-            this.tempDate = new Timestamp(new Date().getTime());
+            this.tempDate = new Date();
         }
     }
 
-    public Temperature(Long id, double tempValue, Timestamp tempDate) {
+    public Temperature(Long id, double tempValue, Date tempDate) {
         this.id = id;
         this.tempValue = tempValue;
         if (tempDate != null) {
             this.tempDate = tempDate;
         } else {
-            this.tempDate = new Timestamp(new Date().getTime());
+            this.tempDate = new Date();
         }
     }
 
@@ -57,11 +57,11 @@ public class Temperature implements Serializable, Identifier {
         this.tempValue = tempValue;
     }
 
-    public Timestamp getTempDate() {
+    public Date getTempDate() {
         return tempDate;
     }
 
-    public void setTempDate(Timestamp tempDate) {
+    public void setTempDate(Date tempDate) {
         this.tempDate = tempDate;
     }
 
