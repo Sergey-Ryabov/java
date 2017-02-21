@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/controller/TemperatureController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/dao/GenericDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/dao/TemperatureDAO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/dao/exceptions/StorageException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/dao/jdbc/mysql/GenericDAOMySqlImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/dao/jdbc/mysql/TemperatureDAOMySqlImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/model/Identifier.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/model/Temperature.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/testtask/webservice/utils/Constants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/database" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/temperature" charset="UTF-8" />
+  </component>
+</project>
