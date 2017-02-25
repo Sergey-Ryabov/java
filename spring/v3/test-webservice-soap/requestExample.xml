@@ -1,0 +1,98 @@
+<soapenv:Envelope xmlns:api='http://testtask.org/spring/ws/api' xmlns:smev='http://testtask.org/spring/ws/api/l2' 
+		xmlns:soapenv='http://schemas.xmlsoap.org/soap/envelope/' 
+		xmlns:wsu='http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd'>
+	<soapenv:Header/>
+	<soapenv:Body xmlns:wsu='http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd' wsu:Id='id-100'>
+		<api:createTicket xmlns:api='http://testtask.org/spring/ws/api'>
+			<smev:Message xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+				<smev:Sender xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+					<smev:Code xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_001</smev:Code>
+					<smev:Name xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_001</smev:Name>
+				</smev:Sender>
+				<smev:Recipient xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+					<smev:Code xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_002</smev:Code>
+					<smev:Name xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_002</smev:Name>
+				</smev:Recipient>
+				<smev:Originator xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+					<smev:Code xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_003</smev:Code>
+					<smev:Name xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST_003</smev:Name>
+				</smev:Originator>
+				<smev:TypeCode xmlns:smev='http://testtask.org/spring/ws/api/l2'>TEST</smev:TypeCode>
+				<smev:Status xmlns:smev='http://testtask.org/spring/ws/api/l2'>REQUEST</smev:Status>
+				<smev:Date xmlns:smev='http://testtask.org/spring/ws/api/l2'>2016-07-13T00:00:00</smev:Date>
+				<smev:ExchangeType xmlns:smev='http://testtask.org/spring/ws/api/l2'>0</smev:ExchangeType>
+				<smev:RequestIdRef xmlns:smev='http://testtask.org/spring/ws/api/l2'/>
+				<smev:OriginRequestIdRef xmlns:smev='http://testtask.org/spring/ws/api/l2'/>
+				<smev:ServiceCode xmlns:smev='http://testtask.org/spring/ws/api/l2'>0000-0000</smev:ServiceCode>
+				<smev:CaseNumber xmlns:smev='http://testtask.org/spring/ws/api/l2'>0000000000</smev:CaseNumber>
+			</smev:Message>
+			<smev:MessageData xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+				<smev:AppData xmlns:smev='http://testtask.org/spring/ws/api/l2'>
+					<ticket>
+						<serviceId>417</serviceId>
+						<firstName>Иван</firstName>
+						<lastName>Кастомный-Юридический</lastName>
+						<middleName>Петрович</middleName>
+						<description>Прошу провести государственную экспертизу проектной документации и результатов инженерных изысканий.</description>
+						<addressKladr displayName=''/>
+						<passportNumber>000000</passportNumber>
+						<passportSeries>0000</passportSeries>
+						<passportDate>1900-01-01</passportDate>
+						<xmlBody>
+							<applicants> <!--не обязательный тэг -->
+								<Applicant>
+
+									<lastName>Кастомный-Юридический</lastName>
+									<firstName>Иван</firstName>
+									<middleName>Петрович</middleName>
+
+									<personEMail>juridical@test.com</personEMail>
+									<personINN>juridical@test.com</personINN>
+
+									<objects>
+										<object>
+											<objectTypeId>1</objectTypeId>
+											<nameObject>Наименование объекта</nameObject>
+											<power>18</power>
+
+
+
+
+											<docs>
+												<requiredInfo>( 30 ) 31</requiredInfo>
+											</docs>
+
+											<docsOptionals>
+												<docsOptional>
+													<namePart>Наименование раздела1</namePart>
+													<shifr>111</shifr>
+												</docsOptional>
+
+												<dopPartName1/><docPartDef1>(  ) </docPartDef1>
+												<docsOptional>
+													<namePart>Наименование раздела2</namePart>
+													<shifr>222</shifr>
+												</docsOptional>
+											</docsOptionals>
+
+										</object>
+									</objects>
+								</Applicant>
+
+							</applicants>
+						</xmlBody>
+						<ticketAttachments xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation=''>
+							<attachment>
+								<id>25265</id>
+								<name>UserData_userdata.pdf</name>
+								<mimeType>application/pdf</mimeType>
+								<isSigned>true</isSigned>
+							</attachment>
+						</ticketAttachments>
+					</ticket>
+					<requestBody>
+					</requestBody>
+				</smev:AppData>
+			</smev:MessageData>
+		</api:createTicket>
+	</soapenv:Body></soapenv:Envelope>

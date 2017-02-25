@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified"
+           targetNamespace="http://testtask.org/spring/ws/api">
+    <xs:element name="createTicketRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Message" type="xs:string" />
+                <xs:element name="ticket" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="createTicketResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="MessageData" type="xs:string"/>
+                <xs:element name="Message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
