@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="styles/styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+            <ul id="menu">
+                <li onclick="changePanel(1)" class="activeTab">
+                    СОЗДАНИЕ ПРАВИЛА
+                </li>
+                <li onclick="changePanel(2)" >
+                    ПРОСМОТР СПИСКА ПРАВИЛ
+                </li>
+            </ul>
+            <br>
+        </header>
+
+
+
+        <div id="panel_1" class=" min-height-300">
+
+
+            <div id="leftPanel" class="margin-0-auto width-80  background-white">
+                <span class="margin-left-20 margin-t-b-10px">ВИНОВНЫЙ ВОДИТЕЛЬ</span>
+                <input type="radio" name="results" value="1" id="results-1" class="margin-left-20 margin-t-b-10px"><span class="margin-t-b-10px">ПЕРВЫЙ</span>
+                <input type="radio" name="results" value="2" id="results-2" class="margin-left-20 margin-t-b-10px"><span class="margin-right-20 margin-t-b-10px">ВТОРОЙ</span>
+                <!--                Описание:-->
+                <!--                <textarea id="description" class="description">
+                
+                                </textarea>-->
+                <input id="description" class="margin-left-20 margin-t-b-10px description width-45" type="text" placeholder="Описание"/><br>
+                <input id="createNewRuleBtn" type="button" class="margin-left-20 margin-t-b-10px" onclick="createNewRule()" value="СОЗДАТЬ ПРАВИЛО"/>
+                <input id="editRuleBtn" class="hide float-right" type="button" onclick="editRule()" value="ИЗМЕНИТЬ ПРАВИЛО"/>
+                <input id="goToCreateNewRuleBtn"  class="hide" type="button" onclick="changePanel(1, false, true)" value="Перейти к созданию нового правила"/>
+                <input id="removeCurrentRuleBtn"  class="hide " type="button" onclick="deleteRule()" value="УДАЛИТЬ ПРАВИЛО"/>
+
+            </div>
+
+            <table id="newRuleTable" class="margin-0-auto-top-20px table-style  background-white">
+            </table>
+        </div>
+
+        <div id="panel_2" class="hide min-height-300">
+            <table id="rulesTable" class="margin-0-auto-top-20px table-style  background-white">
+            </table>
+        </div>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </body>
+</html>
